@@ -153,6 +153,8 @@ autoplot(pokemon_res)
 
 What do you notice? Do larger or smaller values of penalty and mixture produce better accuracy and ROC AUC?
 
+Smaller values of penalty produce better accuracy. Mixture values differ from 0.44 to 0.777 for better accuracy. 
+
 
 7. Use select_best() to choose the model that has the optimal roc_auc. Then use finalize_workflow(), fit(), and augment() to fit the model to the training set and evaluate its performance on the testing set.
 
@@ -199,5 +201,6 @@ augment(pokemon_final_fit, new_data = pokemon_test) %>%
 
 What do you notice? How did your model do? Which Pokemon types is the model best at predicting, and which is it worst at? Do you have any ideas why this might be?
 
+The model does a good job predicting Water and Normal types, but not Fire and Grass. The ROC curves reflect the prediction of Normal types, however not for Water so we can say that there is overprediction there. 
 
 
