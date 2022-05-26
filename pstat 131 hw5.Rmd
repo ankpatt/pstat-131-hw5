@@ -32,7 +32,6 @@ tidymodels_prefer()
 ```
 ```{r}
 pokemon<- read.csv('/Users/ankitapattnaik/Downloads/homework-5/data/Pokemon.csv')
-pokemon
 ```
 
 1. Install and load the janitor package. Use its clean_names() function on the Pokémon data, and save the results to work with for the rest of the assignment. What happened to the data? Why do you think clean_names() is useful?
